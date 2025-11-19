@@ -7,13 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #101017;
-      --bg-card: #181826;
+      --page-bg: #f6f3ff;
+      --card-bg: #ffffff;
       --accent: #ff5a7b;
-      --text-light: #f7f7ff;
-      --text-muted: #b3b3c6;
-      --border-soft: rgba(255, 255, 255, 0.12);
-      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+      --text-main: #1f1f2e;
+      --text-muted: #6b6b80;
+      --border-soft: rgba(15, 15, 40, 0.08);
+      --shadow-soft: 0 18px 40px rgba(15, 15, 40, 0.12);
       --radius-xl: 22px;
     }
 
@@ -25,8 +25,8 @@
 
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: radial-gradient(circle at top, #24243e 0, #060612 55%, #020208 100%);
-      color: var(--text-light);
+      background: radial-gradient(circle at top, #ffffff 0, var(--page-bg) 48%, #ece8ff 100%);
+      color: var(--text-main);
       min-height: 100vh;
       padding: 24px 16px 40px;
       display: flex;
@@ -46,7 +46,7 @@
     .menu-title {
       font-size: clamp(1.9rem, 4vw, 2.3rem);
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -56,7 +56,7 @@
 
     .menu-heart {
       font-size: 1.6rem;
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     main {
@@ -66,7 +66,7 @@
     }
 
     .course-card {
-      background: linear-gradient(145deg, rgba(6,6,18,0.98), rgba(16,16,23,1));
+      background: var(--card-bg);
       border-radius: var(--radius-xl);
       border: 1px solid var(--border-soft);
       padding: 16px 18px 18px;
@@ -84,7 +84,8 @@
       color: var(--text-muted);
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border: 1px solid rgba(15, 15, 40, 0.18);
+      background: #f9f7ff;
       justify-self: flex-start;
     }
 
@@ -116,9 +117,6 @@
       .course-card {
         grid-template-columns: 1fr;
       }
-      .course-header {
-        flex-direction: row;
-      }
       .course-icon {
         justify-self: flex-start;
       }
@@ -131,8 +129,8 @@
 
       .course-card:hover {
         transform: translateY(-3px);
-        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75);
-        border-color: rgba(255, 90, 123, 0.55);
+        box-shadow: 0 24px 50px rgba(15, 15, 40, 0.18);
+        border-color: rgba(255, 90, 123, 0.45);
       }
     }
   </style>
@@ -148,10 +146,11 @@
       <section class="course-card">
         <div class="course-label">Vorspeise</div>
         <div class="course-header">
-          <h2 class="dish-name">Käseplatte „Shareable Crush“</h2>
+          <h2 class="dish-name">Leichter Salat mit Mozzarella</h2>
         </div>
         <p class="dish-description">
-          Auswahl aus cremigem Brie, mildem Gouda und Hartkäse mit Trauben, Nüssen und Baguette – perfekt zum gemeinsamen Probieren.
+          Bunter Blattsalat mit Kirschtomaten, Gurke und frischem Mozzarella,
+          abgerundet mit einem leichten Honig-Senf-Dressing.
         </p>
       </section>
 
@@ -159,10 +158,11 @@
       <section class="course-card">
         <div class="course-label">Hauptgang</div>
         <div class="course-header">
-          <h2 class="dish-name">Lachs-Sahne-Gratin „First Bite“</h2>
+          <h2 class="dish-name">Lachs-Sahne-Gratin mit Bandnudeln</h2>
         </div>
         <p class="dish-description">
-          Zartes Lachsfilet in cremiger Sahnesoße mit Dill und Käse überbacken, serviert mit einer Beilage nach Wahl.
+          Zartes Lachsfilet in einer milden Sahnesoße mit Dill und Zitrone, mit Käse überbacken
+          und zusammen mit Bandnudeln serviert.
         </p>
       </section>
 
@@ -173,7 +173,7 @@
           <h2 class="dish-name">Beeren-Mascarpone-Dessert im Glas</h2>
         </div>
         <p class="dish-description">
-          Mascarpone-Joghurt-Creme, süße Beeren und knusprige Keksbrösel – geschichtet im Glas zum Teilen (oder nicht).
+          Mascarpone-Joghurt-Creme, süße Beeren und knusprige Keksbrösel, liebevoll im Glas geschichtet.
         </p>
       </section>
     </main>
