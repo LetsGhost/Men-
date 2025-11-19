@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Date Night Menü</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #101017;
+      --bg-card: #181826;
+      --accent: #ff5a7b;
+      --text-light: #f7f7ff;
+      --text-muted: #b3b3c6;
+      --border-soft: rgba(255, 255, 255, 0.12);
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.55);
+      --radius-xl: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #24243e 0, #060612 55%, #020208 100%);
+      color: var(--text-light);
+      min-height: 100vh;
+      padding: 24px 16px 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .page-wrapper {
+      width: 100%;
+      max-width: 720px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .menu-title {
+      font-size: clamp(1.9rem, 4vw, 2.3rem);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .menu-title span {
+      color: var(--accent);
+    }
+
+    .menu-heart {
+      font-size: 1.6rem;
+      margin-top: 4px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .course-card {
+      background: linear-gradient(145deg, rgba(6,6,18,0.98), rgba(16,16,23,1));
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-soft);
+      padding: 16px 18px 18px;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px 14px;
+      align-items: center;
+    }
+
+    .course-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      justify-self: flex-start;
+    }
+
+    .course-icon {
+      font-size: 1.3rem;
+      justify-self: flex-end;
+    }
+
+    .course-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      grid-column: 1 / -1;
+    }
+
+    .dish-name {
+      font-size: 1.05rem;
+      font-weight: 500;
+    }
+
+    .dish-description {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      grid-column: 1 / -1;
+    }
+
+    @media (max-width: 520px) {
+      .course-card {
+        grid-template-columns: 1fr;
+      }
+      .course-header {
+        flex-direction: row;
+      }
+      .course-icon {
+        justify-self: flex-start;
+      }
+    }
+
+    @media (hover: hover) {
+      .course-card {
+        transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, border-color 0.2s ease-out;
+      }
+
+      .course-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 24px 50px rgba(0, 0, 0, 0.75);
+        border-color: rgba(255, 90, 123, 0.55);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <h1 class="menu-title">Menü</h1>
+    </header>
+
+    <main>
+      <!-- Vorspeise -->
+      <section class="course-card">
+        <div class="course-label">Vorspeise</div>
+        <div class="course-header">
+          <h2 class="dish-name">Käseplatte „Shareable Crush“</h2>
+        </div>
+        <p class="dish-description">
+          Auswahl aus cremigem Brie, mildem Gouda und Hartkäse mit Trauben, Nüssen und Baguette – perfekt zum gemeinsamen Probieren.
+        </p>
+      </section>
+
+      <!-- Hauptgang -->
+      <section class="course-card">
+        <div class="course-label">Hauptgang</div>
+        <div class="course-header">
+          <h2 class="dish-name">Lachs-Sahne-Gratin „First Bite“</h2>
+        </div>
+        <p class="dish-description">
+          Zartes Lachsfilet in cremiger Sahnesoße mit Dill und Käse überbacken, serviert mit einer Beilage nach Wahl.
+        </p>
+      </section>
+
+      <!-- Dessert -->
+      <section class="course-card">
+        <div class="course-label">Dessert</div>
+        <div class="course-header">
+          <h2 class="dish-name">Beeren-Mascarpone-Dessert im Glas</h2>
+        </div>
+        <p class="dish-description">
+          Mascarpone-Joghurt-Creme, süße Beeren und knusprige Keksbrösel – geschichtet im Glas zum Teilen (oder nicht).
+        </p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
